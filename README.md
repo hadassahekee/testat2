@@ -2,7 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
-## Development server
+## University Test Project
+#
+This project was carried out for the Web Development Course
+at the Hof University of Applied Sciences for semester 2 bachelor degree students.
+Task:
+Develop and implement a bootstrap-based
+HTML5/JavaScript/jQuery/AngularJS single page web application, which
+contains at least the following HTML 5 elements: header, footer, nav,
+and section.
+Implement the following features:
+a) Show a 8x8 chessboard with two kings and two pawns, a white and a black
+respectively.
+b) The kings and pawns should be able to move, mouse drag and drop,
+following valid chess rules.
+c) Use external jQuery and JavaScript files.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
