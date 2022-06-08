@@ -50,18 +50,31 @@ export class AppComponent {
 
     this.board.nativeElement.innerHTML = table
 
-    this.addPawn("cell8-4")
-    this.addPawn("cell7-5", false)
+    // Add Chess Pawn
+    this.addChessPawn("cell5-2",true)
+    this.addChessPawn("cell6-3", true)
+
+    // Add Chess King
+    this.addChessKing("cell8-4", false)
+    this.addChessKing("cell7-5", false)
 
 
   }
 
-  addPawn(cellId: string, isWhite = true) {
-    const sourse = isWhite ? '"./assets/pawn_white.png"' : '"./assets/pawn_black.png"'
-
-    const img = `<img src="${sourse}" class="pawn-in-ceell"/>`
+  addChessPawn(cellId: string, isWhite = true) {
+    const source = isWhite ? "/assets/pawn_black.jpg" : "/assets/pawn_white.jpg"
+    const size = 50;
+    const img = '<img src="${source}" class="pawn-in-cell"/>';
     // cellElement.nativeElement.innerHTML = img
+      (<HTMLElement>document.getElementById(cellId)).innerHTML = `<img draggable="true"  src="${source}"  alt="pawn" style="padding: 5px;width: ${size}px;height: :${size}px;" />`
 
+  }
+  addChessKing(cellId: string, isWhite = true) {
+    const source = !isWhite ? "/assets/white_king.jpg" : "/assets/black_king.jpg"
+    const size = 50;
+    const img = '<img src="${source}" class="pawn-in-cell"/>';
+    // cellElement.nativeElement.innerHTML = img
+    (<HTMLElement>document.getElementById(cellId)).innerHTML = `<img draggable="true"  src="${source}"  alt="pawn" style="padding: 5px;width: ${size}px;height: :${size}px;" />`
 
   }
 
